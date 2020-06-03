@@ -22,6 +22,13 @@
 #
 # N is an integer within the range [1..2,147,483,647].
 
+def solution(n):
+    return len(max("{0:b}".format(n).strip('0').split('1')))
 
-def solution(N):
-    pass
+def non_ninja_solution(n):
+    n_binary = "{decimal_integer:b}".format(decimal_integer=n)  # binary representation of n - stored in String
+    stripped_n_binary = n_binary.strip('0')  # binary representation stripped from leading and tailing zeros
+    spited_n_binary = stripped_n_binary.split('1')  # we split binary representation into list ('1' is the separator)
+    list_max_value = max(spited_n_binary)  # max value form list
+    zeroes_my_heroes = len(list_max_value)  # count length of max value
+    return zeroes_my_heroes

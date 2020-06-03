@@ -13,5 +13,5 @@
 # In your solution, focus on correctness. The performance of your solution will not be the focus of the assessment.
 
 
-def solution(A, B):
-    pass
+def solution(a, b):
+    return "{0:b}".format(a * b).count('1')

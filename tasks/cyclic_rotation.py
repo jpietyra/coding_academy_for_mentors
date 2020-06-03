@@ -39,5 +39,7 @@
 # In your solution, focus on correctness. The performance of your solution will not be the focus of the assessment.
 
 
-def solution(A, K):
-    pass
+def solution(a, k):
+    for i in range(k):
+        a = [a[-1], *a[:-1]]
+    return a

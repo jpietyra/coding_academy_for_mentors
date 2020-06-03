@@ -17,5 +17,15 @@
 #
 
 
-def solution(A):
-    pass
+def solution(a):
+    result = 1
+    a.sort()
+    for i in a:
+        if i <= 0:
+            continue
+        elif result < i:
+            return result
+        else:
+            result = i + 1
+    return result
+

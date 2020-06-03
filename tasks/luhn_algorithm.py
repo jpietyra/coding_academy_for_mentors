@@ -20,4 +20,10 @@
 
 
 def solution(card_number):
-    pass
+    sum = 0
+    for idx, char in enumerate(card_number[::-1]):
+        digit = (idx % 2 + 1) * int(char)
+        if digit > 9:
+            digit -= 9
+        sum += digit
+    return sum % 10 == 0
